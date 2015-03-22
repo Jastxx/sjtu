@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "OnlineSjtu Auto",
+  "description": "",
+  "version": "1.1",
+  
+  
+  "permissions": [
+    "http://www.onlinesjtu.com/",
+    "http://218.1.73.12/",
+    "http://course.onlinesjtu.com/",
+    "notifications"
+  ],
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
