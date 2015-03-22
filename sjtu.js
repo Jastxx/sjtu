@@ -103,6 +103,7 @@ $(function () {
         var runDown = false;
         $.each(course, function (i, kc) {
             kc.dk = [];
+            appendInfo("《" + kc.name + "》");
             $.get(url_kaoqin + "courseid=" + kc.id + "&term_identify=" + term, function (d) {
                 var x = delCode(d);
                 appendInfo('《')
@@ -120,7 +121,7 @@ $(function () {
                     var isExpire = !isCom && vTime < new Date().getTime();//已过期
                     dk.qianUse = !isCom && vTime > new Date().getTime();//是否可签
 
-                    appendInfo("<label style='color:" + (dk.qianUse ? "red" : '') + "'>《" + dk.name + "》：" + dk.qDay + " - " + (dk.downstatus ? '已签到' : '未签到') + " - " + (isCom?'已':'未') + "评价" + (isExpire ? '（已过期）' : '') + '</label>');
+                    appendInfo("<label style='color:" + (dk.qianUse ? "red" : '') + "'>：" + dk.qDay + " - " + (dk.downstatus ? '已签到' : '未签到') + " - " + (isCom?'已':'未') + "评价" + (isExpire ? '（已过期）' : '') + '</label>');
                     if (dk.qianUse)
                         comNum++;
                     if (!runDown && dk.qianUse && !dk.downstatus)
