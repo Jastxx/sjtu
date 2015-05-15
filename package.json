@@ -1,0 +1,10 @@
+{
+  "name": "nw-demo",
+  "main": "example1.html",
+  "window": {
+    "title": "online sjtu auto do",
+    "toolbar": false,
+    "icon":"icon.png",
+    "width": 600
+  }
+}
